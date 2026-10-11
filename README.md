@@ -1,6 +1,6 @@
 # Hi there, I'm Kader Beevi 👋
 
-**Lead / Staff Software Engineer & AI Architect**  
+**Lead Software Engineer**  
 *Specializing in High-Concurrency OLTP Systems, Distributed Database Architectures, Scalable Low-Latency Backend Engines, Enterprise RAG Workflows, AI Governance, and Stateful Multi-Agent Systems.*
 
 📍 Pullman, WA | ✉️ kaderbv@gmail.com | 💼 [LinkedIn](https://linkedin.com/in/kaderbeevi) | 💻 [GitHub](https://github.com/Kaderbv)
