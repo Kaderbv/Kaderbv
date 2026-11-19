@@ -24,12 +24,6 @@ With over **17 years of hands-on engineering experience**, I build high-availabi
 
 ## 📂 Featured Open-Source & AI Projects
 
-### 🧠 [WIKIRAG - Stateful Multi-Agent RAG System](https://github.com/Kaderbv/WIKIRAG)
-**Role:** Lead Creator & Architect  
-*Stateful Retrieval-Augmented Generation Architecture*
-* Designed a low-latency, stateful RAG pipeline utilizing **LangChain**, **LangGraph**, and **Qdrant/Milvus** vector databases.
-* Integrated multi-agent orchestration to dynamically process unstructured queries and validate retrieval accuracy before LLM synthesis.
-
 ### 🛡️ [Aegis Platform](https://github.com/AegisAI-Labs/aegis-platform)
 **Role:** Independent Developer & AI Architect  
 *Enterprise AI Security, Governance, and Agentic Guardrail Framework*
@@ -47,6 +41,12 @@ for concurrent agent executions.
 *Multimodal Computer Vision & Natural Language Query Engine*
 * Combined computer vision inference pipelines with natural language grounding using Python, FastAPI, and Streamlit.
 * Containerized end-to-end microservices ensuring rapid local and cloud deployments.
+
+### 🧠 [WIKIRAG - Stateful Multi-Agent RAG System](https://github.com/Kaderbv/WIKIRAG)
+**Role:** Lead Creator & Architect  
+*Stateful Retrieval-Augmented Generation Architecture*
+* Designed a low-latency, stateful RAG pipeline utilizing **LangChain**, **LangGraph**, and **Qdrant/Milvus** vector databases.
+* Integrated multi-agent orchestration to dynamically process unstructured queries and validate retrieval accuracy before LLM synthesis.
 
 ### 📊 [Classic Machine Learning & Anomaly Detection Workflows](https://github.com/Kaderbv)
 **Role:** Lead Developer  
