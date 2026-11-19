@@ -33,8 +33,14 @@ With over **17 years of hands-on engineering experience**, I build high-availabi
 ### 🛡️ [Aegis Platform](https://github.com/AegisAI-Labs/aegis-platform)
 **Role:** Independent Developer & AI Architect  
 *Enterprise AI Security, Governance, and Agentic Guardrail Framework*
-* Built real-time policy enforcement and prompt injection prevention layers for agentic LLM workflows.
-* Implemented low-latency telemetry logging and audit traces for concurrent agent executions.
+* Aegis AI Platform is a production-grade AI infrastructure platform designed to build, deploy, observe, evaluate, and operate reliable AI agents at scale.
+* Built an asynchronous AI agent API using FastAPI and LangGraph, with tool routing and configurable OpenAI and NVIDIA model providers.
+* Developed modular retrieval-augmented generation (RAG) components with configurable document chunking, OpenAI embeddings, and Qdrant vector storage.
+* Implemented a retrieval safety pipeline combining pattern-based query guardrails, document-level role and organization access checks, and PII masking with Presidio.
+* Added optional LLM query expansion and cross-encoder reranking, plus source citation tracking and heuristic hallucination-risk scoring.
+* Engineered LLM reliability controls with bounded retries, exponential backoff, request deadlines, and streaming-aware error handling; added automated tests and CI quality checks.
+* Added request observability and automated quality checks through unit and integration tests, Ruff, mypy, and GitHub Actions.
+for concurrent agent executions.
 
 ### 👁️ [LocateMeAI](https://github.com/Kaderbv/LocateMeAI)
 **Role:** Lead Creator & Architect  
