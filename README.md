@@ -24,17 +24,21 @@ With over **17 years of hands-on engineering experience**, I build high-availabi
 
 ## 📂 Featured Open-Source & AI Projects
 
-### 🛡️ [Aegis Platform](https://github.com/AegisAI-Labs/aegis-platform)
+### 🛡️ [Aegis AI Platform](https://github.com/Kaderbv/aegis-platform-showcase)
 **Role:** Independent Developer & AI Architect  
 *Enterprise AI Security, Governance, and Agentic Guardrail Framework*
-* Aegis AI Platform is a production-grade AI infrastructure platform designed to build, deploy, observe, evaluate, and operate reliable AI agents at scale.
-* Built an asynchronous AI agent API using FastAPI and LangGraph, with tool routing and configurable OpenAI and NVIDIA model providers.
-* Developed modular retrieval-augmented generation (RAG) components with configurable document chunking, OpenAI embeddings, and Qdrant vector storage.
-* Implemented a retrieval safety pipeline combining pattern-based query guardrails, document-level role and organization access checks, and PII masking with Presidio.
-* Added optional LLM query expansion and cross-encoder reranking, plus source citation tracking and heuristic hallucination-risk scoring.
-* Engineered LLM reliability controls with bounded retries, exponential backoff, request deadlines, and streaming-aware error handling; added automated tests and CI quality checks.
-* Added request observability and automated quality checks through unit and integration tests, Ruff, mypy, and GitHub Actions.
-for concurrent agent executions.
+
+A production-grade platform to build, deploy, observe, evaluate, and operate reliable AI agents at scale. **Current release: v0.2.0 (Agent + RAG Foundation)**, with PostgreSQL persistence in progress.
+> 🔒 Source code is private. The [showcase repo](https://github.com/Kaderbv/aegis-platform-showcase) has the case study, architecture, measured results, and design record. Reviewers can request access there.
+
+* **Agent engine:** Built an async agent API with **FastAPI** and **LangGraph** that routes each request to a sandboxed calculator, the LLM, or the knowledge base, with real **SSE streaming** and typed API error mapping.
+* **Multi-provider LLM layer:** Wrote a provider abstraction with **NVIDIA** (default) and **OpenAI** adapters, bounded retries with exponential backoff, request deadlines, and streaming-safe failure handling.
+* **Grounded RAG:** Built configurable chunking (recursive / markdown), **OpenAI and NVIDIA embeddings**, **Qdrant** storage, and file upload (.txt/.md/.pdf/.docx). Agent answers are grounded in retrieved context, with source citations.
+* **Retrieval safety (fail-closed):** Added query guardrails, role- and tenant-based access control, LLM query expansion, cross-encoder reranking, **Presidio** PII masking, and hallucination-risk scoring.
+* **Multi-tenant data integrity:** Found and fixed cross-tenant overwrite and injection paths by scoping document identity to `(organization, doc_id)`. Added tenant-safe delete and content-hash change detection, so unchanged documents skip re-embedding.
+* **Observability and operations:** Built LLM and RAG metrics (latency, failures by pipeline stage, guardrail rejections), correlation-ID middleware, startup model warm-up behind readiness probes, and an app factory.
+* **Persistence (in progress, v0.3.0):** Added async **PostgreSQL** (asyncpg) settings, pooled engine lifecycle, and database-aware readiness checks, with Postgres 16 integration tests in CI.
+* **Engineering rigor:** Documentation-first process (PRD, SRS, C4, **10 RFCs**, **18 ADRs**). **900+ unit, integration, and smoke tests** run without API keys, and GitHub Actions gates every change on Ruff, mypy, pytest, and pre-commit.
 
 ### 👁️ [LocateMe AI: Voice-Assisted Object Finder](https://github.com/Kaderbv/LocateMeAI-Showcase)
 **Role:** Lead Creator & Architect  
