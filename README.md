@@ -36,11 +36,17 @@ With over **17 years of hands-on engineering experience**, I build high-availabi
 * Added request observability and automated quality checks through unit and integration tests, Ruff, mypy, and GitHub Actions.
 for concurrent agent executions.
 
-### 👁️ [LocateMeAI](https://github.com/Kaderbv/LocateMeAI)
+### 👁️ [LocateMe AI: Voice-Assisted Object Finder](https://github.com/Kaderbv/LocateMeAI-Showcase)
 **Role:** Lead Creator & Architect  
 *Multimodal Computer Vision & Natural Language Query Engine*
-* Combined computer vision inference pipelines with natural language grounding using Python, FastAPI, and Streamlit.
-* Containerized end-to-end microservices ensuring rapid local and cloud deployments.
+> 🔒 Source code is private. The [showcase repo](https://github.com/Kaderbv/LocateMeAI-Showcase) has the case study, [demo video](https://youtu.be/C4aFTRYnjs0), architecture, and evaluation results. Reviewers can request access there.
+
+* Built a full-stack voice and text object finder ("where's my phone?") that combines **YOLOv8** detection, **ByteTrack / BoT-SORT** multi-object tracking, a local **LLaVA** vision-language model via Ollama, and **MiniLM** intent routing, using **FastAPI** and **Streamlit**.
+* Designed **tracklet stitching** and a static-object rule that count each object once instead of once per frame. This cut video counting error **8×** (MAE 5.33 → 0.67), turning "1,916 detections" into "3 motorcycles".
+* Built a **privacy blur** layer and tested it adversarially by re-running the detector on blurred output. Bystander leakage dropped from **24 % to 0 %**.
+* Raised LLM class extraction from **86.7 % to 100 %** exact match by tracing every failure to the deterministic parser, then locking each fix in with a regression test.
+* Runs fully **on-device**: **21 ms** per image and **45–47 FPS** video on CPU. Images never leave the machine.
+* Wrote a **six-stage evaluation suite** (intent, extraction, detection mAP, counting MAE/MAPE, latency, blur leakage) and 53 pytest unit tests, with GitHub Actions gating Docker Compose deploys to AWS EC2.
 
 ### 🧠 [WIKIRAG - Stateful Multi-Agent RAG System](https://github.com/Kaderbv/WIKIRAG)
 **Role:** Lead Creator & Architect  
